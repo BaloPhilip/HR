@@ -1,0 +1,191 @@
+<header class="header">
+</header>
+
+<div class="container app-page">
+    <div class="row">
+        <div class="panel-body">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span>&nbsp; Вернуться к
+                            анкетам</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <table class="table table-hover">
+                <tbody id="list-users">
+                <tr>
+                    <td><strong>ФИО</strong></td>
+                    <td>
+                        {{$ctrl.result.userData.lastName}}
+                        {{$ctrl.result.userData.firstName}}
+                        {{$ctrl.result.userData.middleName}}
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Email</strong></td>
+                    <td>{{$ctrl.result.userData.email}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Телефон</strong></td>
+                    <td>{{$ctrl.result.userData.phone}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Вакансия</strong></td>
+                    <td>{{$ctrl.result.userData.position}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Опыт работы</strong></td>
+                    <td>{{$ctrl.result.userData.experience}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+            <h4>Тест на конфликтность</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-hover table-condensed table-bordered">
+                    <tbody>
+                    <tr>
+                        <td>Конкурентный</td>
+                        <td class="text-center">{{$ctrl.total_q1.competitive}}</td>
+                    </tr>
+                    <tr>
+                        <td>Партнерский</td>
+                        <td class="text-center">{{$ctrl.total_q1.partnership}}</td>
+                    </tr>
+                    <tr>
+                        <td>Компромиснный</td>
+                        <td class="text-center">{{$ctrl.total_q1.compromise}}</td>
+                    </tr>
+                    <tr>
+                        <td>Избегающий</td>
+                        <td class="text-center">{{$ctrl.total_q1.avoiding}}</td>
+                    </tr>
+                    <tr>
+                        <td>Сотруднечесикй</td>
+                        <td class="text-center">{{$ctrl.total_q1.collaborative}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+            <h4>Тест на определение мативации в работе</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-hover table-condensed table-bordered">
+                    <tbody>
+                    <tr>
+                        <td>Финансы</td>
+                        <td class="text-center">{{$ctrl.total_q2.finance}}</td>
+                    </tr>
+                    <tr>
+                        <td>Признание \ вознагр</td>
+                        <td class="text-center">{{$ctrl.total_q2.recognition}}</td>
+                    </tr>
+                    <tr>
+                        <td>Ответственность</td>
+                        <td class="text-center">{{$ctrl.total_q2.responsibility}}</td>
+                    </tr>
+                    <tr>
+                        <td>Отношение с руководством</td>
+                        <td class="text-center">{{$ctrl.total_q2.relationship_leadership}}</td>
+                    </tr>
+                    <tr>
+                        <td>Карьера</td>
+                        <td class="text-center">{{$ctrl.total_q2.career}}</td>
+                    </tr>
+                    <tr>
+                        <td>Достижения</td>
+                        <td class="text-center">{{$ctrl.total_q2.achievements}}</td>
+                    </tr>
+                    <tr>
+                        <td>Содержание работы</td>
+                        <td class="text-center">{{$ctrl.total_q2.content_work}}</td>
+                    </tr>
+                    <tr>
+                        <td>Сотрудничество</td>
+                        <td class="text-center">{{$ctrl.total_q2.cooperation}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+            <h4>Тест Беблина</h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-hover table-condensed table-bordered">
+                    <tbody>
+                    <tr>
+                        <td>Реализатор</td>
+                        <td class="text-center">{{$ctrl.total_q3.implementor}}</td>
+                    </tr>
+                    <tr>
+                        <td>Координатор</td>
+                        <td class="text-center">{{$ctrl.total_q3.coordinator}}</td>
+                    </tr>
+                    <tr>
+                        <td>Творец</td>
+                        <td class="text-center">{{$ctrl.total_q3.creator}}</td>
+                    </tr>
+                    <tr>
+                        <td>Генератор идей</td>
+                        <td class="text-center">{{$ctrl.total_q3.idea_generator}}</td>
+                    </tr>
+                    <tr>
+                        <td>Исследователь</td>
+                        <td class="text-center">{{$ctrl.total_q3.researcher}}</td>
+                    </tr>
+                    <tr>
+                        <td>Эксперт</td>
+                        <td class="text-center">{{$ctrl.total_q3.expert}}</td>
+                    </tr>
+                    <tr>
+                        <td>Дипломат</td>
+                        <td class="text-center">{{$ctrl.total_q3.diplomat}}</td>
+                    </tr>
+                    <tr>
+                        <td>Исполнитель</td>
+                        <td class="text-center">{{$ctrl.total_q3.executor}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer">
+</footer>
