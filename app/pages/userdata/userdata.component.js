@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('userdata').component('userdata', {
+angular
+    .module('userdata').component('userdata', {
     templateUrl: 'pages/userdata/userdata.template.html',
 
     controller: ['UserdataService', 'Userdataanswersq1Service', 'Userdataanswersq2Service', 'Userdataanswersq3Service', 'ANSWERS_CONFIG', '$routeParams',

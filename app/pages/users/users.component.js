@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('users').component('users', {
+angular
+    .module('users').component('users', {
     templateUrl: 'pages/users/users.template.html',
 
     controller: ['UsersService',
