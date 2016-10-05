@@ -3,6 +3,11 @@
 angular.
 module('answers.config', [])
     .constant('ANSWERS_CONFIG', {
+
+        // Схема расчета результата на Тест №1
+        // index_answer - номер вопроса
+        // index_question - номер ответа (0 - ответ на певый вопрос, 1 - ответ на второй вопрос)
+
         QUESTIONNAIRE_1: [
             {
                 index_answer: [2, 5, 7, 8, 9, 12, 13, 15, 16, 21, 24, 27],
@@ -21,6 +26,11 @@ module('answers.config', [])
                 index_question: [1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0]
             }
         ],
+
+        // Схема расчета результата на Тест №2
+        // index_answer - номер вопроса
+        // index_question - номер ответа (0 - ответ на певый вопрос, 1 - ответ на второй вопрос)
+
         QUESTIONNAIRE_2: [
             {
                 index_answer: [0, 3, 6, 7, 10, 17, 22],
@@ -48,6 +58,11 @@ module('answers.config', [])
                 index_question: [0, 0, 0, 0, 0, 0, 0]
             }
         ],
+
+        // Схема расчета результата на Тест №3
+        // index_answer - номер вопроса
+        // index_question - номер ответа
+
         QUESTIONNAIRE_3: [
             {
                 index_answer: [0, 1, 2, 3, 4, 5, 6],
