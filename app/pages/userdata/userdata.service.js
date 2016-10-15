@@ -3,25 +3,21 @@
 function userDataService($resource, API_CONFIG) {
 
     // Ресурс для получения данных пользователя с БД
-
     var fetchUserData = $resource(API_CONFIG.URL + 'user/:user_id', {
         user_id: '@user_id'
     }, {});
 
     // Ресурс для получения ответов на Тест №1 с БД
-
     var fetchAnswersQuestionnaire1 = $resource(API_CONFIG.URL + 'user/:user_id/answers/57a44ac43420027d90aa7784', {
         user_id: '@user_id'
     }, {});
 
     // Ресурс для получения ответов на Тест №2 с БД
-
     var fetchAnswersQuestionnaire2 = $resource(API_CONFIG.URL + 'user/:user_id/answers/57a44ad73420027d90aa7785', {
         user_id: '@user_id'
     }, {});
 
     // Ресурс для получения ответов на Тест №3 с БД
-
     var fetchAnswersQuestionnaire3 = $resource(API_CONFIG.URL + 'user/:user_id/answers/57a44ae93420027d90aa7786', {
         user_id: '@user_id'
     }, {});
@@ -35,7 +31,6 @@ function userDataService($resource, API_CONFIG) {
     };
 
     // Обработка результата тестов
-
     function calculate_total(answers_config, questionnaire, number_cells) {
         var sum = 0;
 

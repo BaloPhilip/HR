@@ -10,7 +10,6 @@ function userDataCtrl(UserDataService, ANSWERS_CONFIG, $routeParams) {
     vm.user_id = $routeParams.user_id;
 
     // Получение данных пользователя с БП
-
     UserDataService.fetchUserData.get({user_id: vm.user_id}).$promise.then(function (result) {
 
         vm.result = result;
@@ -18,14 +17,12 @@ function userDataCtrl(UserDataService, ANSWERS_CONFIG, $routeParams) {
     });
 
     // Получение ответов Теста №1
-
     UserDataService.fetchAnswersQuestionnaire1.get({user_id: vm.user_id}).$promise.then(function (result) {
 
         answers_q1 = result;
 
         // Анализ полученных ответов
         // ANSWERS_CONFIG.QUESTIONNAIRE_1 - схема вычисления результата Теста №1
-
         vm.total_q1 = {
             competitive: UserDataService.calculate_total(ANSWERS_CONFIG.QUESTIONNAIRE_1[0], answers_q1, 11),
             partnership: UserDataService.calculate_total(ANSWERS_CONFIG.QUESTIONNAIRE_1[1], answers_q1, 11),
@@ -37,14 +34,12 @@ function userDataCtrl(UserDataService, ANSWERS_CONFIG, $routeParams) {
     });
 
     // Получение ответов Теста №2
-
     UserDataService.fetchAnswersQuestionnaire2.get({user_id: vm.user_id}).$promise.then(function (result) {
 
         answers_q2 = result;
 
         // Анализ полученных ответов
         // ANSWERS_CONFIG.QUESTIONNAIRE_2 - схема вычисления результата Теста №2
-
         vm.total_q2 = {
             finance: UserDataService.calculate_total(ANSWERS_CONFIG.QUESTIONNAIRE_2[0], answers_q2, 6),
             recognition: UserDataService.calculate_total(ANSWERS_CONFIG.QUESTIONNAIRE_2[1], answers_q2, 6),
@@ -59,14 +54,12 @@ function userDataCtrl(UserDataService, ANSWERS_CONFIG, $routeParams) {
     });
 
     // Получение ответов Теста №3
-
     UserDataService.fetchAnswersQuestionnaire3.get({user_id: vm.user_id}).$promise.then(function (result) {
 
         answers_q3 = result;
 
         // Анализ полученных ответов
         // ANSWERS_CONFIG.QUESTIONNAIRE_3 - схема вычисления результата Теста №3
-
         vm.total_q3 = {
             implementor: UserDataService.calculate_total(ANSWERS_CONFIG.QUESTIONNAIRE_3[0], answers_q3, 6),
             coordinator: UserDataService.calculate_total(ANSWERS_CONFIG.QUESTIONNAIRE_3[1], answers_q3, 6),

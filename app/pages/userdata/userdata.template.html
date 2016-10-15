@@ -9,8 +9,12 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <nav aria-label="...">
                     <ul class="pager">
-                        <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span>&nbsp; Вернуться к
-                            анкетам</a></li>
+                        <li class="previous">
+                            <a href="#!/users">
+                                <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;
+                                Вернуться к анкетам
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -104,7 +108,7 @@
                         <td class="text-center">{{$ctrl.total_q2.finance}}</td>
                     </tr>
                     <tr>
-                        <td>Признание \ вознагр</td>
+                        <td>Признание \ вознаграждение</td>
                         <td class="text-center">{{$ctrl.total_q2.recognition}}</td>
                     </tr>
                     <tr>

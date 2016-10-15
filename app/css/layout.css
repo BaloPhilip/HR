@@ -1,3 +1,7 @@
 .app-page {
     min-height: 400px;
 }
+
+a:hover {
+    text-decoration: none;
+}
